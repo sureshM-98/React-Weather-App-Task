@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Podkova:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body .container {
+  background: #ebf0f4;
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container__sidebar {
+  width: 20%;
+  background: #fff;
+  margin: 20px;
+  border-radius: 20px;
+}
+.container__sidebar .sidebar__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.sidebar__content .logo {
+  align-self: center;
+  padding: 25px;
+}
+.line {
+  align-self: center;
+}
+hr {
+  border: 2px solid #a1e0ff;
+  width: 200px;
+  border-radius: 5px;
+}
+.nav__sidebar {
+  align-self: center;
+  margin-top: 20px;
+}
+.navigation li {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  padding: 15px;
+  align-items: center;
+}
+.navigation .active {
+  padding: 15px 50px 15px 15px;
+  border-radius: 5px;
+  background: #a1e0ff;
+}
+.navigation .active img {
+  filter: brightness(0) invert(1);
+}
+.navigation .active a {
+  color: #fff;
+}
+.navigation li a {
+  text-decoration: none;
+  color: #a1e0ff;
+  padding-left: 10px;
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container__main {
+  /* Take the remaining width */
+  flex: 1;
+
+  /* Make it scrollable */
+  overflow: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container__main .container__date {
+  background: #fff;
+  width: 95%;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.user__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user__icon {
+  margin-left: 10px;
+}
+
+.container__input .title p {
+  padding: 20px 0;
+}
+
+.container__input section {
+  background: #fff;
+  width: 95%;
+  border-radius: 10px;
+  height: 72vh;
+  display: flex;
+  justify-content: center;
+}
+.all__fields .username__info {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.input__title {
+  color: #808080;
+  font-weight: 400;
+}
+.input__field input {
+  background: #ededed;
+  padding: 10px 15px;
+  outline: none;
+  width: 350px;
+  outline: none;
+  border-radius: 5px;
+  color: #646464;
+  border: none;
+}
+.input__field button {
+  background: #a1e0ff;
+  width: 350px;
+  padding: 15px 0;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.container__weather {
+  background: #fff;
+  width: 95%;
+  border-radius: 10px;
+  height: 72vh;
+  display: flex;
+  justify-content: center;
+}
+.sub__weather {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.state {
+  margin-top: 30px;
+}
+.state .input__state {
+  color: #808080;
+  font-weight: 400;
+  padding: 10px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.state .input__drop input {
+  background: #ededed;
+  padding: 10px 15px;
+  outline: none;
+  width: 350px;
+  outline: none;
+  border-radius: 5px;
+  color: #646464;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.show__temp {
+  background: #a1e0ff;
+  margin-top: 30px;
+  padding: 10px;
+  display: flex;
+  height: 100px;
+  border-radius: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.show__temp .temp__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  color: #fff;
+}
+.temp__box .temp p {
+  font-size: 12px;
+}
+.temp__box .degree span {
+  font-size: 52px;
+  font-family: 'Podkova', serif;
+}
+.temp__box .degree {
+  padding: 10px 0;
+  align-self: center;
 }
